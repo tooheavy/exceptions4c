@@ -1,0 +1,16 @@
+markdown: kramdown
+highlighter: pygments
+relative_permalinks: false
+permalink: /news/:year/:month/:day/:title/
+excerpt_separator: ""
+
+repository: https://github.com/guillermocalvo/exceptions4c/
+help_url: https://github.com/guillermocalvo/exceptions4c/wiki/
+
+collections:
+  docs:
+    output: true
+
+exclude: ["README.md"]
+
+google_analytics_id: UA-61670496-1

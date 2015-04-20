@@ -1,0 +1,6 @@
+_exclude/
+_site/
+*.swp
+pkg/
+test/
+/.sass-cache

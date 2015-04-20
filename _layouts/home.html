@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <p class="first">{{ page.intro }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="grid">
+{% for feature in page.features %}
+    <div class="unit one-third">
+      <h2>{{ feature.title }}</h2>
+      <p>{{ feature.description }}</p>
+  {% if feature.url %}
+      <a href="{{ feature.url }}">{{ feature.link }} &rarr;</a>
+  {% endif %}
+    </div>
+  {% if forloop.index0 == 2 || forloop.index0 == 5 || forloop.index0 == forloop.last %}
+    <div class="clear"></div>
+  {% endif %}
+{% endfor %}
+  </div>
+</section>
+
+<!-- EXCEPTIONS4C IN A NUTSHELL -->
+<section class="nutshell">
+  <div class="grid">
+    <div class="unit golden-large code">
+      <div class="sample">
+        {% highlight c %}{{ page.nutshell.sample }}{% endhighlight %}
+      </div>
+    </div>
+    <div class="unit golden-small center-on-mobiles">
+      <h3>{{ page.nutshell.title }}</h3>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="home-content">
+  <div class="grid">
+    <div class="unit whole">
+      <div class="grid pane">
+        <div class="unit whole center-on-mobiles">
+          <div class="pane-content">
+            {{ content }}
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</section>
