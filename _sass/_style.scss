@@ -384,6 +384,23 @@ section.content > div.home > blockquote{
   p { margin: .75em 0; }
 }
 
+.message-content{
+
+  .pane {
+    background-color: $pane-background;
+    @include border-radius(10px);
+    text-shadow: none;
+    position: relative;
+    padding: 20px 40px 10px 40px;
+
+    img{
+
+	  @include border-radius(10px);
+	  @include box-shadow(0 5px 30px rgba(0,0,0,.3));
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .home-content {
 
@@ -397,6 +414,7 @@ section.content > div.home > blockquote{
 
   }
 }
+
 
 /* Article - Used for both docs and news */
 
@@ -678,6 +696,11 @@ h5 > code,
   width: 100%;
   overflow: auto;
 }
+
+/* fix indentation issue: highlight plugin does not play nice with markdown code blocks */
+.highlight > pre > code{ margin-left: -1em; }
+.highlight > pre > code:before{ content: '    '; }
+.nutshell .highlight > pre > code:before {  content: '  '; }
 
 /* HTML Elements */
 
