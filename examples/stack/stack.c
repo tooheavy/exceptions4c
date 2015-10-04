@@ -77,3 +77,25 @@ int stack_pop(stack_t * stack){
 
     return(element);
 }
+
+bool stack_is_empty(stack_t * stack){
+
+    // Check if null stack
+    if(stack == NULL){
+
+        return(false);
+    }
+
+    return(stack->top == stack->bottom);
+}
+
+bool stack_is_full(stack_t * stack){
+
+    // Check if null stack
+    if(stack == NULL){
+
+        return(false);
+    }
+
+    return(stack->top == stack->ceiling);
+}

@@ -3,6 +3,8 @@
 # define STACK_H
 
 
+# include <stdbool.h>
+
 /**
  * A stack represents a last-in-first-out (LIFO) collection of elements.
  *
@@ -36,6 +38,16 @@ extern void stack_push(stack_t * stack, int element);
  * @returns -1 if stack is empty
  */
 extern int stack_pop(stack_t * stack);
+
+/**
+ * Tests if this stack is empty.
+ */
+extern bool stack_is_empty(stack_t * stack);
+
+/**
+ * Tests if this stack is full.
+ */
+extern bool stack_is_full(stack_t * stack);
 
 
 # endif
