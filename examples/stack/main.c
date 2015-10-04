@@ -20,13 +20,16 @@ int main(int argc, char *argv[]){
         return(EXIT_FAILURE);
     }
 
-    stack_push(stack, 1);
+    stack_push(stack, -1);
     stack_push(stack, 20);
     stack_push(stack, 300);
     stack_push(stack, 4000);
 
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+    /* this elements will be lost */
+    stack_push(stack, 50000);
+    stack_push(stack, 600000);
+    stack_push(stack, 7000000);
+    stack_push(stack, 80000000);
 
     element = stack_pop(stack);
     printf("Pop: %d\n", element);
@@ -37,7 +40,10 @@ int main(int argc, char *argv[]){
     element = stack_pop(stack);
     printf("Pop: %d\n", element);
 
-    /* oops... stack underflow */
+    element = stack_pop(stack);
+    printf("Pop: %d\n", element);
+
+    /* what if we pushed -1? */
     element = stack_pop(stack);
     printf("Pop: %d\n", element);
 
