@@ -20,32 +20,116 @@ int main(int argc, char *argv[]){
         return(EXIT_FAILURE);
     }
 
-    stack_push(stack, -1);
-    stack_push(stack, 20);
-    stack_push(stack, 300);
-    stack_push(stack, 4000);
+    if( stack_is_full(stack) ){
 
-    /* this elements will be lost */
-    stack_push(stack, 50000);
-    stack_push(stack, 600000);
-    stack_push(stack, 7000000);
-    stack_push(stack, 80000000);
+        printf("Stack is full\n");
+    }else{
 
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+        stack_push(stack, -1);
+    }
 
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+    if( stack_is_full(stack) ){
 
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+        printf("Stack is full\n");
+    }else{
 
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+        stack_push(stack, 20);
+    }
 
-    /* what if we pushed -1? */
-    element = stack_pop(stack);
-    printf("Pop: %d\n", element);
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 300);
+    }
+
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 4000);
+    }
+
+    /* these elements will be lost */
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 50000);
+    }
+
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 600000);
+    }
+
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 7000000);
+    }
+
+    if( stack_is_full(stack) ){
+
+        printf("Stack is full\n");
+    }else{
+
+        stack_push(stack, 80000000);
+    }
+
+    if( stack_is_empty(stack) ){
+
+        printf("Stack is empty\n");
+    }else{
+
+        element = stack_pop(stack);
+        printf("Pop: %d\n", element);
+    }
+
+    if( stack_is_empty(stack) ){
+
+        printf("Stack is empty\n");
+    }else{
+
+        element = stack_pop(stack);
+        printf("Pop: %d\n", element);
+    }
+
+    if( stack_is_empty(stack) ){
+
+        printf("Stack is empty\n");
+    }else{
+
+        element = stack_pop(stack);
+        printf("Pop: %d\n", element);
+    }
+
+    if( stack_is_empty(stack) ){
+
+        printf("Stack is empty\n");
+    }else{
+
+        element = stack_pop(stack);
+        printf("Pop: %d\n", element);
+    }
+
+	/* the stack will be empty here */
+    if( stack_is_empty(stack) ){
+
+        printf("Stack is empty\n");
+    }else{
+
+        element = stack_pop(stack);
+        printf("Pop: %d\n", element);
+    }
 
     stack_delete(stack);
 
