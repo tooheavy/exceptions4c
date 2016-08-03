@@ -11,8 +11,15 @@
 	"language": "en",
 	"direction": "ltr",
 	"gitbook": ">= 3.0.0",
-	"plugins": [],
-	"pluginsConfig": {},
+    "plugins": [
+        "disqus"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "exceptions4c",
+            "useIdentifier": true
+        }
+    },
 	"pdf": {
 		"pageNumbers": true,
 		"fontSize": 12,
