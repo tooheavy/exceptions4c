@@ -3,7 +3,8 @@
         "sharing",
         "lunr",
         "disqus",
-        "forkmegithub"
+        "forkmegithub",
+        "ga"
     ],
     "root": "./doc/",
     "pluginsConfig": {
@@ -33,6 +34,10 @@
         "forkmegithub": {
             "url": "https://github.com/guillermocalvo/exceptions4c/",
             "color": "red"
+        },
+        "ga": {
+            "token": "UA-61670496-1",
+            "configuration": "auto"
         }
     },
     "author": "Guillermo Calvo",
