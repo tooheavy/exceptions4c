@@ -4,7 +4,8 @@
         "lunr",
         "disqus",
         "forkmegithub",
-        "ga"
+        "ga",
+        "github-buttons"
     ],
     "root": "./doc/",
     "pluginsConfig": {
@@ -38,6 +39,16 @@
         "ga": {
             "token": "UA-61670496-1",
             "configuration": "auto"
+        },
+        "github-buttons": {
+            "repo": "guillermocalvo/exceptions4c",
+            "types": [
+                "star",
+                "watch",
+                "fork",
+                "follow"
+            ],
+            "size": "large"
         }
     },
     "author": "Guillermo Calvo",
