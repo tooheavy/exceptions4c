@@ -5,7 +5,8 @@
         "disqus",
         "forkmegithub",
         "ga",
-        "github-buttons"
+        "github-buttons",
+        "hints"
     ],
     "root": "./doc/",
     "pluginsConfig": {

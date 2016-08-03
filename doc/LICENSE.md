@@ -11,10 +11,16 @@ This software is distributed in the hope that it will be useful, but
 [GNU Lesser General Public License](http://www.gnu.org/licenses/lgpl.html) for
 more details.
 
+{% hint %}
+
 You should have received a copy of the GNU Lesser General Public License along
 with this software. If not, see <http://www.gnu.org/licenses/>.
 
+{% endhint %}
+
 ## Required
+
+{% hint style='tip' %}
 
 - **License and copyright notice**: Include a copy of the license and copyright
 notice with the code.
@@ -23,7 +29,11 @@ application.
 - **Disclose Source**: Source code for this library must be made available when
 distributing the software.
 
+{% endhint %}
+
 ## Permitted
+
+{% hint style='working' %}
 
 - **Commercial Use**: This software and derivatives may be used for commercial
 purposes.
@@ -34,7 +44,13 @@ software to third parties not included in the license.
 - **Patent Grant**: This license provides an express grant of patent rights from
 the contributor to the recipient.
 
+{% endhint %}
+
 ## Forbidden
+
+{% hint style='danger' %}
 
 - **Hold Liable**: Software is provided without warranty and the software
 author/license owner cannot be held liable for damages.
+
+{% endhint %}
