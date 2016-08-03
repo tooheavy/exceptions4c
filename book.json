@@ -1,21 +1,11 @@
 {
-	"root": "./doc/",
-	"structure": {
-		"readme": "README.md",
-		"summary": "SUMMARY.md",
-		"glossary": "GLOSSARY.md"
-	},
-	"title": "Exceptions4c",
-	"description": "An exception handling framework for C",
-	"author": "Guillermo Calvo",
-	"language": "en",
-	"direction": "ltr",
-	"gitbook": ">= 3.0.0",
     "plugins": [
         "sharing",
+        "lunr",
         "disqus",
         "forkmegithub"
     ],
+    "root": "./doc/",
     "pluginsConfig": {
         "sharing": {
             "facebook": true,
@@ -32,6 +22,10 @@
                 "instapaper"
             ]
         },
+        "lunr": {
+            "maxIndexSize": 1000000,
+            "ignoreSpecialCharacters": true
+        },
         "disqus": {
             "shortName": "exceptions4c",
             "useIdentifier": true
@@ -41,22 +35,33 @@
             "color": "red"
         }
     },
-	"pdf": {
-		"pageNumbers": true,
-		"fontSize": 12,
-		"fontFamily": "Arial",
-		"paperSize": "a4",
-		"margin": {
-			"top": 56,
-			"bottom": 56,
-			"right": 62,
-			"left": 62
-		}
-	},
-	"links": {
-		"sidebar": {
-			"Project Website": "http://guillermo.in/exceptions4c/",
-			"Source Code": "https://github.com/guillermocalvo/exceptions4c/"
-		}
-	}
+    "author": "Guillermo Calvo",
+    "title": "Exceptions4c",
+    "language": "en",
+    "links": {
+        "sidebar": {
+            "Project Website": "http://guillermo.in/exceptions4c/",
+            "Source Code": "https://github.com/guillermocalvo/exceptions4c/"
+        }
+    },
+    "gitbook": ">= 3.0.0",
+    "description": "An exception handling framework for C",
+    "direction": "ltr",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md",
+        "glossary": "GLOSSARY.md"
+    },
+    "pdf": {
+        "pageNumbers": true,
+        "fontSize": 12,
+        "fontFamily": "Arial",
+        "paperSize": "a4",
+        "margin": {
+            "top": 56,
+            "bottom": 56,
+            "right": 62,
+            "left": 62
+        }
+    }
 }
