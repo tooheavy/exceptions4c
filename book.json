@@ -13,7 +13,8 @@
 	"gitbook": ">= 3.0.0",
     "plugins": [
         "sharing",
-        "disqus"
+        "disqus",
+        "forkmegithub"
     ],
     "pluginsConfig": {
         "sharing": {
@@ -34,6 +35,10 @@
         "disqus": {
             "shortName": "exceptions4c",
             "useIdentifier": true
+        },
+        "forkmegithub": {
+            "url": "https://github.com/guillermocalvo/exceptions4c/",
+            "color": "red"
         }
     },
 	"pdf": {
