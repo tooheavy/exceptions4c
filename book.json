@@ -12,9 +12,25 @@
 	"direction": "ltr",
 	"gitbook": ">= 3.0.0",
     "plugins": [
+        "sharing",
         "disqus"
     ],
     "pluginsConfig": {
+        "sharing": {
+            "facebook": true,
+            "twitter": true,
+            "google": true,
+            "weibo": true,
+            "instapaper": true,
+            "vk": true,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "instapaper"
+            ]
+        },
         "disqus": {
             "shortName": "exceptions4c",
             "useIdentifier": true
