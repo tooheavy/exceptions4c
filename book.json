@@ -11,18 +11,15 @@
     "root": "./doc/",
     "pluginsConfig": {
         "sharing": {
-            "facebook": true,
             "twitter": true,
-            "google": true,
-            "weibo": true,
             "instapaper": true,
-            "vk": true,
             "all": [
                 "facebook",
-                "google",
                 "twitter",
+                "google",
                 "weibo",
-                "instapaper"
+                "instapaper",
+                "vk"
             ]
         },
         "lunr": {
@@ -45,11 +42,9 @@
             "repo": "guillermocalvo/exceptions4c",
             "types": [
                 "star",
-                "watch",
-                "fork",
                 "follow"
             ],
-            "size": "large"
+            "size": "small"
         }
     },
     "author": "Guillermo Calvo",
