@@ -1,8 +1,9 @@
 
 # exceptions4c
 
-> Bring the power of exceptions to your C applications
-> with this tiny, portable library.
+{% hint %}
+Bring the power of exceptions to your C applications with this tiny, portable library.
+{% endhint %}
 
 
 ## An exception handling framework for C

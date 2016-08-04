@@ -1,2 +1,18 @@
 /* CSS for website */
 @import url("octicons/font/octicons.css");
+@import url("//fonts.googleapis.com/css?family=Patua+One");
+@import url("//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900");
+
+h1#exceptions4c{
+
+	font-size: 4em;
+	line-height: 2em;
+	margin: 0;
+	font-family: 'Patua One';
+	text-align: center;
+}
+
+div.alert{
+
+    font: 300 1.25em Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
