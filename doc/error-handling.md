@@ -1,5 +1,5 @@
 
-## Exception Handling
+## Error Handling
 
 This library provides you with a simple set of keywords (*macros*, actually)
 which map the semantics of exception handling you're probably already used to:

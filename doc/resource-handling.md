@@ -1,5 +1,5 @@
 
-## Dispose Pattern
+## Resource Handling
 
 There are other keywords related to resource handling:
 

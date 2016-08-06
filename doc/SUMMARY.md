@@ -7,9 +7,9 @@
 
 ## Features {#features}
 
-- [Exception Handling](exception-handling.md)
+- [Error Handling](error-handling.md)
 - [Exception Hierarchies](hierarchies.md)
-- [Dispose Pattern](dispose-pattern.md)
+- [Resource Handling](resource-handling.md)
 - [Signal Handling](signal-handling.md)
 - [Multithreading](multithreading.md)
 - [Integration](integration.md)
