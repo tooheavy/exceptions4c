@@ -4,7 +4,7 @@ relative_permalinks: false
 permalink: /news/:year/:month/:day/:title/
 excerpt_separator: ""
 
-url: https://guillermocalvo.github.io
+url: http://guillermo.in
 baseurl: /exceptions4c
 repository: https://github.com/guillermocalvo/exceptions4c/
 help_url: https://github.com/guillermocalvo/exceptions4c/wiki/
