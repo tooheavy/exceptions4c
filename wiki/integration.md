@@ -1,6 +1,9 @@
-#summary Integrating exceptions4c into external libraries
+---
+layout: wiki
+title: Integrating exceptions4c into external libraries
+---
 
-= Integration =
+# Integration
 
 Whether you are developing a standalone application, or an external library that provides services to independent programs, you can integrate `exceptions4c` in your code very easily.
 
@@ -8,4 +11,4 @@ The system provides a mechanism for implicit initialization and finalization of 
 
 ----
 
-[http://exceptions4c.googlecode.com/svn/trunk/etc/img/logo/exceptions4c_128.png]
+<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c**128.png>

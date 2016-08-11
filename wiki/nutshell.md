@@ -1,24 +1,29 @@
-#summary exceptions4c in a nutshell
-#labels Featured
+---
+layout: wiki
+title: exceptions4c in a nutshell
+tags: [ "Featured" ]
+---
 
-= What =
+# What
 
-*`exceptions4c`* is an exception handling framework for C.
+**`exceptions4c`** is an exception handling framework for C.
 
-= Why =
+# Why
 
 Because it's way more convenient to treat errors as exceptions, rather than checking the status of the last operation.
 
-= When =
+# When
 
- * *`try`*: when a block of code is aware of the possibility that some exception can be thrown within it.
- * *`finally`*: when a block of code needs to clean things up, regardless of any exception.
- * *`throw`*: when some part of the program finds an error that can't handle, or something really bad happens: division by zero, segmentation fault, etc...
- * *`catch`*: ...the flow of the program jumps to a block of code that is able to handle the error.
+ - **`try`**: when a block of code is aware of the possibility that some exception can be thrown within it.
+ - **`finally`**: when a block of code needs to clean things up, regardless of any exception.
+ - **`throw`**: when some part of the program finds an error that can't handle, or something really bad happens: division by zero, segmentation fault, etc...
+ - **`catch`**: ...the flow of the program jumps to a block of code that is able to handle the error.
 
-= Where =
+# Where
 
 Cleaning up:
+
+```
 
 {{{
 void * buffer = malloc(1024);
@@ -30,7 +35,11 @@ try{
 }
 }}}
 
+```
+
 Ensuring preconditions:
+
+```
 
 {{{
 int stack_pop(Stack * stack){
@@ -45,7 +54,11 @@ int stack_pop(Stack * stack){
 }
 }}}
 
+```
+
 Recovering from errors:
+
+```
 
 {{{
 int * pointer = NULL;
@@ -59,11 +72,15 @@ try{
 ...
 }}}
 
-= How =
+```
 
- * Drop the `e4c.h` and `e4c.c` in your project.
- * *`#include`* `"e4c.h"`
- * Create a `e4c_using_context` code block in `main`.
+# How
+
+ - Drop the `e4c.h` and `e4c.c` in your project.
+ - **`#include`** `"e4c.h"`
+ - Create a `e4c**using**context` code block in `main`.
+
+```
 
 {{{
 int main(int argc, char * argv[]){
@@ -82,6 +99,8 @@ int main(int argc, char * argv[]){
 }
 }}}
 
+```
+
 ----
 
-[http://exceptions4c.googlecode.com/svn/trunk/etc/img/logo/exceptions4c_128.png]
+<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c**128.png>

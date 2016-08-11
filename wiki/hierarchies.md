@@ -1,16 +1,21 @@
-#summary Exception hierarchies
+---
+layout: wiki
+title: Exception hierarchies
+---
 
-= Exception hierarchies =
+# Exception hierarchies
 
-The possible exceptions in a program are organized in a _pseudo-hierarchy_ of exceptions. `RuntimeException` is the root of the exceptions _pseudo-hierarchy_. *Any* exception can be caught by a `catch(RuntimeException)` block, *except* `AssertionException`.
+The possible exceptions in a program are organized in a **pseudo-hierarchy** of exceptions. `RuntimeException` is the root of the exceptions **pseudo-hierarchy**. **Any** exception can be caught by a `catch(RuntimeException)` block, **except** `AssertionException`.
 
 When an exception is thrown, control is transferred to the nearest dynamically-enclosing `catch` code block that handles the exception. Whether a particular `catch` block handles an exception is found out by comparing the type (and supertypes) of the actual thrown exception against the specified exception in the `catch` clause.
 
 A `catch` block is given an exception as a parameter. This parameter determines the set of exceptions that can be handled by the code block. A block handles an actual exception that was thrown if the specified parameter is either:
- * the same type of that exception.
- * the same type of any of the _supertypes_ of that exception.
+ - the same type of that exception.
+ - the same type of any of the **supertypes** of that exception.
 
-If you write a `catch` block that handles an exception with no defined _subtype_, it will only handle that very specific exception. By grouping exceptions in _hierarchies_, you can design generic `catch` blocks that deal with several exceptions:
+If you write a `catch` block that handles an exception with no defined **subtype**, it will only handle that very specific exception. By grouping exceptions in **hierarchies**, you can design generic `catch` blocks that deal with several exceptions:
+
+```
 
 {{{
 
@@ -38,8 +43,10 @@ try{
 }
 }}}
 
-When looking for a match, `catch` blocks are inspected in the order they appear _in the code_. If you place a handler for a superclass before a subclass handler, the second block will be rendered *unreachable*.
+```
+
+When looking for a match, `catch` blocks are inspected in the order they appear **in the code**. If you place a handler for a superclass before a subclass handler, the second block will be rendered **unreachable**.
 
 ----
 
-[http://exceptions4c.googlecode.com/svn/trunk/etc/img/logo/exceptions4c_128.png]
+<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c**128.png>
