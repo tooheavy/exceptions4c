@@ -28,4 +28,4 @@ If the canceled thread happens to be the last thread of the application, then th
 
 ----
 
-<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c_128.png>
+![](https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c_128.png)
