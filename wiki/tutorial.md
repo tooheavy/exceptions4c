@@ -6,7 +6,7 @@ tags: [ "Featured" ]
 
 # Getting started
 
-This short tutorial will show you how to start using the exception handling framework in your applications. We will see how we can incorporate **exceptions4c** into a test project. Let's suppose we are developing an application component which represents a **integer stack**. We have defined a terse interface to operate on such objects.
+This short tutorial will show you how to start using the exception handling framework in your applications. We will see how we can incorporate **exceptions4c** into a test project. Let's suppose we are developing an application component which represents an **integer stack**. We have defined a terse interface to operate on such objects.
 
 # Our simple `stack` component
 
