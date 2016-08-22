@@ -54,28 +54,22 @@ If you really need any of these, you should use **exceptions4c standard version*
 - stack.h
 
 ```
-
-{{{
 # include "e4c_lite.h"
 
 E4C_DECLARE_EXCEPTION(StackException);
 E4C_DECLARE_EXCEPTION(StackOverflowException);
 E4C_DECLARE_EXCEPTION(StackUnderflowException);
 
-struct stack{ ... };
+struct stack{ /* ... */ };
 
 extern void stack_init(struct stack * s, int max);
 extern void stack_push(struct stack * s, int value);
 extern int stack_pop(struct stack * s);
-}}}
-
 ```
 
 - stack.c
 
 ```
-
-{{{
 # include "stack.h"
 
 E4C_DEFINE_EXCEPTION(StackException, "Stack error!", RuntimeException);
@@ -84,26 +78,22 @@ E4C_DEFINE_EXCEPTION(StackUnderflowException, "Underflow!", StackException);
 
 void stack_push(struct stack * s, int value){
   if( stack_full() ) throw(StackOverflowException, "Too many values!");
-  ...
+  /* ... */
 }
 
 int stack_pop(struct stack * s){
   if( stack_empty() ) throw(StackUnderflowException, NULL); /* default message will be used */
-  ...
+  /* ... */
 }
 
 void stack_init(struct stack * s, int max){
-  ...
+  /* ... */
 }
-}}}
-
 ```
 
 - main.c
 
 ```
-
-{{{
 # include "stack.h"
 
 int main(int argc, char *argv[]){
@@ -140,8 +130,6 @@ int main(int argc, char *argv[]){
 
   return(123); /* program already yielded EXIT_FAILURE due to uncaught exception */
 }
-}}}
-
 ```
 
 ## Tweaks
