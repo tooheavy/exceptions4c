@@ -18,40 +18,41 @@ Here you can download the latest version:
 
 Some features available in lightweight version:
 
-  - **ANSI C**: Written in good **old-fashioned** C; no external dependencies. Available as two portable files (`e4c**lite.h` and `e4c**lite.c`) that can be easily integrated into another project.
-  - **Plug and play**: No need to initialize/finalize it. Just `#include "e4c**lite.h"` and you're ready to use <keywords#try try>, <keywords#catch catch>, <keywords#finally finally> or <keywords#throw throw>.
-  - **Exception Hierarchies**: You can organize your own exception types <hierarchies hierarchically>; exceptions can be <keywords#catch caught> through its supertype.
-  - **Small overhead**: Implemented through a few optimized functions and a handful of macros. Functions take really few parameters. The smallest sufficient data types are used. Struct fields are ordered by size to reduce padding.
-  - **No recursion**: Recursive calls were replaced by simple loops.
-  - **Static allocation**: A static pool is used. No dynamic allocation; no fragmentation. The size of the pool may be configured to tweak your program's memory footprint.
+- **ANSI C**: Written in good **old-fashioned** C; no external dependencies. Available as two portable files (`e4c_lite.h` and `e4c_lite.c`) that can be easily integrated into another project.
+- **Plug and play**: No need to initialize/finalize it. Just `#include "e4c_lite.h"` and you're ready to use [try](keywords.md#try), [catch](keywords.md#catch), [finally](keywords.md#finally) or [throw](keywords#throw).
+- **Exception Hierarchies**: You can organize your own exception types [hierarchically](hierarchies.md); exceptions can be [caught](keywords.md#catch) through its supertype.
+- **Small overhead**: Implemented through a few optimized functions and a handful of macros. Functions take really few parameters. The smallest sufficient data types are used. Struct fields are ordered by size to reduce padding.
+- **No recursion**: Recursive calls were replaced by simple loops.
+- **Static allocation**: A static pool is used. No dynamic allocation; no fragmentation. The size of the pool may be configured to tweak your program's memory footprint.
 
 ## Non-features
 
 Some features not available in lightweight version:
 
-  - <keywords#assert assert>
-  - <keywords#throwf throwf>
-  - <keywords#repeat repeat> or <keywords#rethrow rethrow>
-  - <keywords#use use>... <keywords#with with> (<features#Dispose**Pattern Dispose patern>)
-  - <signals signal handling>
-  - <uncaught uncaught handler>
-  - <threads multithreading support>
+- [assert](keywords.md#assert 
+- [throwf](keywords.md#throwf 
+- [repeat](keywords.md#repeat) or [rethrow](keywords.md#rethrow)
+- [use](keywords.md#use)... [with](keywords.md#with) ([Dispose patern](features.md#Dispose_Pattern))
+- [signal handling](signals.md)
+- [uncaught handler](uncaught.md)
+- [multithreading support](threads.md)
 
 If you really need any of these, you should use **exceptions4c standard version**.
 
 ## Usage
 
-  - **`E4C**DECLARE**EXCEPTION(name)`**: declares an exception type.
-  - **`E4C**DEFINE**EXCEPTION(name, default**message, supertype)`**: defines an exception type.
-  - **`try`**: introduces a block of code aware of exceptions.
-  - **`catch(type)`**: introduces a block of code capable of handling a specific `type` of exceptions.
-  - **`finally`**: introduces a block of code responsible for cleaning up the previous exception-aware block.
-  - **`throw(type, message)`**: signals an exceptional situation represented by an exception object.
-  - **`E4C**EXCEPTION`**: retrieves current thrown exception.
+- `E4C_DECLARE_EXCEPTION(name)`: declares an exception type.
+- `E4C_DEFINE_EXCEPTION(name, default_message, supertype)`: defines an exception type.
+- `try`: introduces a block of code aware of exceptions.
+- `catch(type)`: introduces a block of code capable of handling a specific `type` of exceptions.
+- `finally`: introduces a block of code responsible for cleaning up the previous exception-aware block.
+- `throw(type, message)`: signals an exceptional situation represented by an exception object.
+- `E4C_EXCEPTION`: retrieves current thrown exception.
 
 ## Example
 
-  - stack.h
+- stack.h
+
 ```
 
 {{{
@@ -70,7 +71,8 @@ extern int stack_pop(struct stack * s);
 
 ```
 
-  - stack.c
+- stack.c
+  
 ```
 
 {{{
@@ -97,7 +99,8 @@ void stack_init(struct stack * s, int max){
 
 ```
 
-  - main.c
+- main.c
+
 ```
 
 {{{
@@ -145,13 +148,13 @@ int main(int argc, char *argv[]){
 
 You may define these **compiler-time** parameters:
 
-  - **`E4C**MAX**FRAMES`**: Maximum number of nested `try` blocks allowed in your program. It impacts the size of the static pool.
-  - **`E4C**MESSAGE**SIZE`**: Maximum length (in bytes) of an exception message.
-  - **`E4C**NOKEYWORDS`**: When defined, `try`, `catch`, `finally` and `throw` macros are not defined (you can still use: `E4C**TRY`, `E4C**CATCH`, `E4C**FINALLY` and `E4C**THROW` though).
-  - **`NDEBUG`**: When defined, exceptions don't store **file/line** information.
+- `E4C_MAX_FRAMES`: Maximum number of nested `try` blocks allowed in your program. It impacts the size of the static pool.
+- `E4C_MESSAGE_SIZE`: Maximum length (in bytes) of an exception message.
+- `E4C_NOKEYWORDS`: When defined, `try`, `catch`, `finally` and `throw` macros are not defined (you can still use: `E4C_TRY`, `E4C_CATCH`, `E4C_FINALLY` and `E4C_THROW` though).
+- `NDEBUG`: When defined, exceptions don't store **file/line** information.
 
 **exceptions4c lightweight version** is licensed under the **GNU Lesser General Public License**.
 
 ----
 
-<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c**128.png>
+![](https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c_128.png)
