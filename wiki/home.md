@@ -42,4 +42,4 @@ You might want to play around with **`exceptions4c`** before actually using it i
 
 ----
 
-<https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c**128.png>
+![](https://raw.githubusercontent.com/guillermocalvo/exceptions4c/master/etc/img/logo/exceptions4c_128.png)
