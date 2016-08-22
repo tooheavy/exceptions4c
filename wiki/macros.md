@@ -104,7 +104,7 @@ Introduces a block of code which will use a new exception context.
 
 ## Detailed Description
 
-This macro begins a new exception context to be used by the code block right next to it. When the code completes, `e4c_context**end` will be called implicitly.
+This macro begins a new exception context to be used by the code block right next to it. When the code completes, `e4c_context_end` will be called implicitly.
 
 This macro is very convenient when the beginning and the ending of the current exception context are next to each other. For example, there is no semantic difference between this two blocks of code:
 
@@ -142,7 +142,7 @@ Reuses an existing exception context, otherwise, begins a new one and then ends 
 ## Parameters
 
 - `status`: the name of a previously defined variable, or lvalue, which will be assigned the specified failure value.
-- `on**failure`: a constant value or expression that will be assigned to the specified lvalue in case of failure.
+- `on_failure`: a constant value or expression that will be assigned to the specified lvalue in case of failure.
 
 ## Detailed Description
 
@@ -225,7 +225,7 @@ Next, the semantics of `e4c_reusing_context` are explained, step by step:
   2. The code block will take place.
   3. If any exception is thrown during the execution of the block:
      - It will be **caught**.
-     - `status` will be asigned the value of the expression `on**failure`.
+     - `status` will be asigned the value of the expression `on_failure`.
 
 If you need to perform any cleanup, you should place it **inside** a `finally` block, for example:
 
