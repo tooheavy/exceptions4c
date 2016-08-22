@@ -29,8 +29,8 @@ Some features available in lightweight version:
 
 Some features not available in lightweight version:
 
-- [assert](keywords.md#assert 
-- [throwf](keywords.md#throwf 
+- [assert](keywords.md#assert)
+- [throwf](keywords.md#throwf)
 - [repeat](keywords.md#repeat) or [rethrow](keywords.md#rethrow)
 - [use](keywords.md#use)... [with](keywords.md#with) ([Dispose patern](features.md#Dispose_Pattern))
 - [signal handling](signals.md)
@@ -72,7 +72,7 @@ extern int stack_pop(struct stack * s);
 ```
 
 - stack.c
-  
+
 ```
 
 {{{
@@ -126,7 +126,7 @@ int main(int argc, char *argv[]){
   }catch(StackException){
 
     /* this block will be executed because StackOverflowException "is-a" StackException */
-    
+
     printf("Caught overflow: %s.", E4C_EXCEPTION.message);
 
   }finally{
