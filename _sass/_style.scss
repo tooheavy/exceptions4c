@@ -697,11 +697,6 @@ h5 > code,
   overflow: auto;
 }
 
-/* fix indentation issue: highlight plugin does not play nice with markdown code blocks */
-.highlight > pre > code{ margin-left: -1em; }
-.highlight > pre > code:before{ content: '    '; }
-.nutshell .highlight > pre > code:before {  content: '  '; }
-
 /* HTML Elements */
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
