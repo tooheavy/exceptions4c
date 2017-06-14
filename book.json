@@ -1,32 +1,24 @@
 {
     "plugins": [
+        "forkmegithub",
         "sharing",
         "lunr",
-        "forkmegithub",
         "ga",
         "hints"
     ],
     "root": "./doc/",
     "pluginsConfig": {
+        "forkmegithub": {
+            "url": "https://github.com/guillermocalvo/exceptions4c/",
+            "color": "red"
+        },
         "sharing": {
             "twitter": true,
-            "instapaper": true,
-            "all": [
-                "facebook",
-                "twitter",
-                "google",
-                "weibo",
-                "instapaper",
-                "vk"
-            ]
+            "facebook": false
         },
         "lunr": {
             "maxIndexSize": 1000000,
             "ignoreSpecialCharacters": true
-        },
-        "forkmegithub": {
-            "url": "https://github.com/guillermocalvo/exceptions4c/",
-            "color": "red"
         },
         "ga": {
             "token": "UA-61670496-1",
