@@ -2,7 +2,6 @@
     "plugins": [
         "sharing",
         "lunr",
-        "disqus",
         "forkmegithub",
         "ga",
         "hints"
@@ -24,10 +23,6 @@
         "lunr": {
             "maxIndexSize": 1000000,
             "ignoreSpecialCharacters": true
-        },
-        "disqus": {
-            "shortName": "exceptions4c",
-            "useIdentifier": true
         },
         "forkmegithub": {
             "url": "https://github.com/guillermocalvo/exceptions4c/",
