@@ -57,6 +57,45 @@ struct e4c_exception{
 /* Returns whether current exception is of a given type */
 #define E4C_IS_INSTANCE_OF(t) ( E4C_EXCEPTION.type == &t || e4c_extends(E4C_EXCEPTION.type, &t) )
 
+/*
+
+初始化当前层，将当前位置（调用setjmp()函数的位置）设置成跳转目标（捕获到异常时，从这里开始检查是否可以处理该异常）
+发生异常时，将跳转到当前层保存的跳转目标，longjmp传递给setjmp的值为1，则从 setjmp 函数返回时也为1
+
+while(e4c_hook(0))
+当异常发生时将会让当前层依次经过e4c_trying, e4c_catching, e4c_finalizing, e4c_done，该循环才正式结束
+
+int e4c_hook(int is_catch) 当前层处于e4c_done状态时才返回0
+
+while(e4c_hook(0))第一次执行将更新当前层进入e4c_trying阶段
+
+如果try中的代码块执行正常，没有异常抛出，则下次循环while(e4c_hook(0))将会更新当前层阶段进入e4c_catching，
+但由于没有异常，将直接跳过e4c_catching，进入e4c_finalizing阶段，执行finally块代码
+
+如果try中的代码块有异常抛出，则将跳转到setjmp位置执行代码，while(e4c_hook(0))更新当前层阶段进入e4c_catching
+有异常，则会判断各e4c_catching分支是否类型匹配，如果匹配则执行异常处理代码
+e4c_catching分支中e4c_hook(1)将会更新当前层为异常已匹配
+后续再进入e4c_finalizing阶段，执行finally块代码
+
+
+if(e4c_try(E4C_INFO) && setjmp(e4c.jump[e4c.frames - 1]) >= 0)
+	while(e4c_hook(0)) 
+		if(e4c.frame[e4c.frames].stage == e4c_trying) {
+
+			代码块
+
+		} else if(e4c.frame[e4c.frames].stage == e4c_catching && E4C_IS_INSTANCE_OF(type) && e4c_hook(1)) {
+
+			异常处理
+
+		} else if(e4c.frame[e4c.frames].stage == e4c_finalizing) {
+
+			最终执行
+
+		}
+
+*/
+
 /* Implementation details */
 #define E4C_TRY if(e4c_try(E4C_DEBUG_INFO) && setjmp(e4c.jump[e4c.frames - 1]) >= 0) while(e4c_hook(0)) if(e4c.frame[e4c.frames].stage == e4c_trying)
 #define E4C_CATCH(type) else if(e4c.frame[e4c.frames].stage == e4c_catching && E4C_IS_INSTANCE_OF(type) && e4c_hook(1))
